@@ -1,0 +1,138 @@
+<!doctype html>
+<html>
+  <head>
+    <title>CSS Carousel</title>
+    <style>
+      body {
+        margin: 0;
+        font-family: Arial;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background: #111;
+      }
+
+      .slider {
+        width: 80%;
+        max-width: 600px;
+        overflow: hidden;
+        border-radius: 10px;
+        position: relative;
+      }
+
+      /* Slides container */
+      .slides {
+        display: flex;
+        width: 300%;
+        animation: slide 9s infinite;
+      }
+
+      /* Each slide */
+      .slide {
+        width: 100%;
+        flex-shrink: 0;
+      }
+
+      .slide img {
+        width: 100%;
+        display: block;
+        border-radius: 10px;
+      }
+
+      /* Auto sliding */
+      @keyframes slide {
+        0% {
+          transform: translateX(0%);
+        }
+        33% {
+          transform: translateX(-100%);
+        }
+        66% {
+          transform: translateX(-200%);
+        }
+        100% {
+          transform: translateX(0%);
+        }
+      }
+
+      /* Hide radio buttons */
+      input[type="radio"] {
+        display: none;
+      }
+
+      /* Manual control overrides animation */
+      #s1:checked ~ .slider .slides {
+        animation: none;
+        transform: translateX(0%);
+      }
+
+      #s2:checked ~ .slider .slides {
+        animation: none;
+        transform: translateX(-100%);
+      }
+
+      #s3:checked ~ .slider .slides {
+        animation: none;
+        transform: translateX(-200%);
+      }
+
+      /* Navigation dots */
+      .nav {
+        position: absolute;
+        bottom: 10px;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        gap: 10px;
+      }
+
+      .nav label {
+        width: 12px;
+        height: 12px;
+        background: white;
+        border-radius: 50%;
+        cursor: pointer;
+        opacity: 0.5;
+      }
+
+      input:checked + label {
+        opacity: 1;
+        transform: scale(1.2);
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Radios -->
+    <input type="radio" name="slider" id="s1" checked />
+    <label for="s1"></label>
+
+    <input type="radio" name="slider" id="s2" />
+    <label for="s2"></label>
+
+    <input type="radio" name="slider" id="s3" />
+    <label for="s3"></label>
+
+    <!-- Slider -->
+    <div class="slider">
+      <div class="slides">
+        <div class="slide">
+          <img src="https://picsum.photos/600/300?1" />
+        </div>
+        <div class="slide">
+          <img src="https://picsum.photos/600/300?2" />
+        </div>
+        <div class="slide">
+          <img src="https://picsum.photos/600/300?3" />
+        </div>
+      </div>
+
+      <!-- Navigation -->
+      <div class="nav">
+        <label for="s1"></label>
+        <label for="s2"></label>
+        <label for="s3"></label>
+      </div>
+    </div>
+  </body>
+</html>

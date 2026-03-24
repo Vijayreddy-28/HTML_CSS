@@ -1,0 +1,90 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+  font-family: "Segoe UI", sans-serif;
+  background: #f0f2f5;
+  color: #333;
+  min-height: 100vh;
+}
+
+/* Navigation */
+.nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: #222;
+  padding: 16px 32px;
+  z-index: 1000;
+}
+
+.nav ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  gap: 32px;
+}
+
+.nav a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 600;
+  transition: color 0.3s;
+}
+
+.nav a:hover {
+  color: #ff4081;
+}
+
+/* Pages Container */
+.pages {
+  display: flex;
+  flex-direction: column;
+  margin-top: 80px; /* space for nav */
+}
+
+/* Page Sections */
+.page {
+  display: none; /* hide all by default */
+  padding: 64px 32px;
+  min-height: calc(100vh - 80px);
+  text-align: center;
+  background: #fff;
+  border-bottom: 2px solid #eee;
+}
+
+/* Show targeted page */
+.page:target {
+  display: block;
+}
+
+/* Show Home page by default */
+.page:first-of-type {
+  display: block;
+}
+
+/* Typography */
+h1 {
+  font-size: 40px;
+  margin-bottom: 16px;
+}
+
+p {
+  font-size: 19px;
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* Responsive Layout */
+@media (max-width: 768px) {
+  .nav ul {
+    flex-direction: column;
+    gap: 16px;
+  }
+}
