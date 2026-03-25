@@ -1,90 +1,93 @@
-/* Reset */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: sans-serif;
 }
 
-/* Body Styling */
 body {
-  font-family: "Segoe UI", sans-serif;
-  background: #f0f2f5;
-  color: #333;
-  min-height: 100vh;
+  overflow-x: hidden;
 }
 
-/* Navigation */
-.nav {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  background: #222;
-  padding: 16px 32px;
-  z-index: 1000;
-}
-
-.nav ul {
+/* NAVBAR */
+nav {
   display: flex;
   justify-content: center;
-  list-style: none;
-  gap: 32px;
+  gap: 20px;
+  background: #111;
+  padding: 15px;
+  position: sticky;
+  z-index: 10;
 }
 
-.nav a {
+nav a {
+  color: white;
   text-decoration: none;
-  color: #fff;
-  font-weight: 600;
-  transition: color 0.3s;
+  padding: 8px 16px;
+  transition: 0.3s;
+  position: sticky;
 }
 
-.nav a:hover {
-  color: #ff4081;
+nav a:hover {
+  background: #444;
+  border-radius: 5px;
 }
 
-/* Pages Container */
+/* PAGE CONTAINER */
 .pages {
+  position: relative;
+  height: 100vh;
+}
+
+/* PAGES */
+.page {
+  position: absolute;
+  width: 100%;
+  height: 100%;
   display: flex;
   flex-direction: column;
-  margin-top: 80px; /* space for nav */
+  justify-content: center;
+  align-items: center;
+  z-index: -1;
+  opacity: 0;
+  transform: translateX(100%);
+  transition: 0.6s ease;
 }
 
-/* Page Sections */
-.page {
-  display: none; /* hide all by default */
-  padding: 64px 32px;
-  min-height: calc(100vh - 80px);
-  text-align: center;
-  background: #fff;
-  border-bottom: 2px solid #eee;
+/* DEFAULT PAGE */
+#home {
+  opacity: 1;
+  transform: translateX(0);
 }
 
-/* Show targeted page */
+/* TARGET PAGE */
 .page:target {
-  display: block;
+  opacity: 1;
+  transform: translateX(0);
+  z-index: 1;
 }
 
-/* Show Home page by default */
-.page:first-of-type {
-  display: block;
+/* ANIMATION FOR EXIT */
+.page:not(:target) {
+  opacity: 0;
+  transform: translateX(-100%);
 }
 
-/* Typography */
-h1 {
-  font-size: 40px;
-  margin-bottom: 16px;
+/* COLORS */
+#home {
+  background: #1abc9c;
+}
+#about {
+  background: #3498db;
+}
+#contact {
+  background: #9b59b6;
 }
 
-p {
-  font-size: 19px;
-  max-width: 700px;
-  margin: 0 auto;
-  line-height: 1.6;
-}
-
-/* Responsive Layout */
-@media (max-width: 768px) {
-  .nav ul {
+/* RESPONSIVE */
+@media (max-width: 600px) {
+  nav {
     flex-direction: column;
-    gap: 16px;
+    align-items: center;
   }
 }
