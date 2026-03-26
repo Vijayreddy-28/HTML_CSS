@@ -13,13 +13,13 @@ Design a navigation bar with a dropdown submenu that appears on hover.
 ### Output Screenshots
 
 #### 1
-![output](images/t1.png)
+![output](images1/t1.png)
 
 #### 2
-![output](images/t2.png)
+![output](images1/t2.png)
 
 #### 3
-![output](images/t3.png)
+![output](images1/t3.png)
 
 #### 4
-![output](images/t4.png)
+![output](images1/t4.png)
