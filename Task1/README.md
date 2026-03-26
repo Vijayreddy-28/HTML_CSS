@@ -11,4 +11,9 @@ Create a single-page website using semantic HTML elements such as `<header>`, `<
 [Output Link](https://drive.google.com/file/d/1HMvuTpzBqRN2bSgEz-CT8o5BT6CEf_Mi/view?usp=sharing)
 
 ### Output Screenshots
+
+#### 1
 ![Output](images/t1.png)
+
+#### 2
+![Output](images/t2.png)
