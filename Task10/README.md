@@ -17,7 +17,7 @@ Create a fully functional, multi-section website that simulates the experience o
 ![output](images/t1.png)
 
 #### 2
-![output](images/t1.png)
+![output](images/t2.png)
 
 #### 3
-![output](images/t1.png)
+![output](images/t3.png)
