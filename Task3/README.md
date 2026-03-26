@@ -9,3 +9,14 @@ Create a grid layout that displays multiple items.
 - Ensure consistent spacing and alignment between items.
 
 [Output Link](https://drive.google.com/file/d/1-zZgAsYA-2YgSu67jwilrFt0nOd9N9Aa/view?usp=sharing)
+
+#### Output Screenshots
+
+#### 1
+![output](images/t1.png)
+
+#### 2
+![output](images/t2.png)
+
+#### 3
+![output](images/t3.png)
