@@ -13,8 +13,8 @@ Develop an image carousel that cycles through slides automatically and/or manual
 #### 1
 ![output](images/1.png)
 
-#### 1
+#### 2
 ![output](images/2.png)
 
-#### 1
+#### 3
 ![output](images/3.png)
