@@ -7,3 +7,14 @@ Develop an image carousel that cycles through slides automatically and/or manual
 - Use CSS animations (`@keyframes`) to create an auto-sliding effect.  
 - Implement manual slide selection using the `:checked` pseudo-class with hidden radio buttons or the `:target` pseudo-class.  
 - Ensure that the slider is responsive and visually engaging.
+
+### Output Screenshots
+
+#### 1
+![output](images/1.png)
+
+#### 1
+![output](images/2.png)
+
+#### 1
+![output](images/3.png)
