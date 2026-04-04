@@ -32,8 +32,9 @@ body {
 }
 
 .item:hover {
-  transform: scale(1.08);
+  transform: rotate(5deg) scale(1.08);
   box-shadow: 3px 3px 8px rgb(19, 212, 64);
+  transition: all 0.3s;
 }
 .item-7 {
   display: grid;

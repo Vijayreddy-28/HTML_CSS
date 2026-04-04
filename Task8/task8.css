@@ -6,7 +6,7 @@
 }
 
 body {
-  background-color: rgb(194, 255, 180);
+  background: linear-gradient(130deg, rgb(145, 234, 145), rgb(140, 228, 237));
 }
 
 .accordian {

@@ -10,12 +10,11 @@ h2 {
   font-size: 30px;
   padding: 15px;
   color: rgb(255, 88, 88);
-  text-shadow: 0px 0px 30px rgb(110, 86, 50);
 }
 
 h2:hover {
-  text-shadow: none;
-  transition: 0.5s;
+  color: blue;
+  transition: all 0.5s;
 }
 
 .myfav {

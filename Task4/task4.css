@@ -4,6 +4,12 @@ body {
   background-color: aliceblue;
 }
 
+.root {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 ul {
   list-style: none;
   background-color: rgb(138, 224, 138);

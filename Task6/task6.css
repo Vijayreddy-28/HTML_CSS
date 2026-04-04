@@ -10,9 +10,6 @@ body {
 input[type="radio"] {
   display: none;
 }
-.container {
-  text-align: center;
-}
 
 .tabs {
   display: flex;
