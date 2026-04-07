@@ -1,9 +1,11 @@
 # Static Webpage Layout
 
 ## Objective
+
 Create a single-page website using semantic HTML elements such as `<header>`, `<nav>`, `<main>`, and `<footer>`.
 
 ## Requirements
+
 - Apply basic CSS styling for typography and colors.
 - Use CSS for spacing (margins and paddings) to create a clear structure.
 - Implement a simple responsive design that adjusts the layout on smaller screens using media queries.
@@ -13,7 +15,17 @@ Create a single-page website using semantic HTML elements such as `<header>`, `<
 ### Output Screenshots
 
 #### 1
+
 ![Output](images/t1.png)
 
 #### 2
+
 ![Output](images/t2.png)
+
+#### 3
+
+![Output](images/t3.png)
+
+#### 4
+
+![Output](images/t4.png)
