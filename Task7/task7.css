@@ -2,109 +2,135 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: sans-serif;
 }
 
 body {
-  background: #0f172a;
+  background-color: rgb(79, 64, 64);
 }
 
-/* SLIDER */
+/* Slider container */
 .slider {
-  width: 85%;
-  max-width: 900px;
-  margin: 50px auto;
-  overflow: hidden;
+  width: 95%;
+  max-width: 800px;
+  height: 400px;
+  margin: 90px auto 0 auto;
   position: relative;
-  border-radius: 15px;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px wheat;
 }
 
-/* HIDE INPUT */
+/* Hide radio buttons */
 input {
   display: none;
 }
 
-/* SLIDES */
+/* Slides container */
 .slides {
-  display: flex;
-  width: 400%;
-  animation: autoSlide 12s infinite;
-}
-
-.slide {
-  width: 100%;
-  height: 400px;
   position: relative;
-  flex-shrink: 0;
+  width: 100%;
+  height: 100%;
 }
 
+/* Individual slides */
+.slide {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+  animation: autoFade 16s infinite; /* automatic fade */
+}
+
+/* Slide images */
 .slide img {
   width: 100%;
-  height: 400px;
+  height: 100%;
   object-fit: cover;
+  border-radius: 10px;
 }
 
-/* OVERLAY TEXT */
-.overlay {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  padding: 20px;
-  color: white;
-  background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+/* Show slide when corresponding radio is checked */
+#s1:checked ~ .slides .slide:nth-child(1),
+#s2:checked ~ .slides .slide:nth-child(2),
+#s3:checked ~ .slides .slide:nth-child(3),
+#s4:checked ~ .slides .slide:nth-child(4) {
+  opacity: 1;
+  animation: none; /* disable auto animation on manual control */
 }
 
-.overlay h2 {
-  font-size: 1.8rem;
-}
-
-/* MANUAL CONTROL */
-#s1:checked ~ .slides {
-  animation: none;
-  transform: translateX(0);
-}
-#s2:checked ~ .slides {
-  animation: none;
-  transform: translateX(-100%);
-}
-#s3:checked ~ .slides {
-  animation: none;
-  transform: translateX(-200%);
-}
-#s4:checked ~ .slides {
-  animation: none;
-  transform: translateX(-300%);
-}
-
-/* NAV DOTS */
+/* Navigation dots */
 .nav {
   position: absolute;
   bottom: 15px;
-  left: 50%;
-  transform: translateX(-50%);
+  width: 100%;
   display: flex;
-  gap: 10px;
+  justify-content: center;
+  z-index: 10;
 }
 
 .nav label {
   width: 12px;
   height: 12px;
-  background: white;
+  margin: 5px;
   border-radius: 50%;
+  background: white;
   cursor: pointer;
-  opacity: 0.5;
+  opacity: 0.6;
+  transition: opacity 0.3s;
 }
 
-#s1:checked ~ .nav label:nth-child(1),
-#s2:checked ~ .nav label:nth-child(2),
-#s3:checked ~ .nav label:nth-child(3),
-#s4:checked ~ .nav label:nth-child(4) {
+.nav label:hover {
   opacity: 1;
 }
 
-/* RESPONSIVE */
-@media (max-width: 600px) {
-  .slide {
-    height: 250px;
+/* Automatic fade animation keyframes */
+@keyframes autoFade {
+  0% {
+    opacity: 1;
+  }
+  20% {
+    opacity: 1;
+  }
+  25% {
+    opacity: 0;
+  }
+  45% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  70% {
+    opacity: 1;
+  }
+  75% {
+    opacity: 0;
+  }
+  95% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@media (max-width: 768px) {
+  .slider {
+    height: 300px;
+  }
+  .nav label {
+    width: 10px;
+    height: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .slider {
+    height: 200px;
+  }
+  .nav label {
+    width: 8px;
+    height: 8px;
   }
 }
