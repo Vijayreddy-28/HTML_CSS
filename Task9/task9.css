@@ -1,3 +1,4 @@
+/* RESET */
 * {
   margin: 0;
   padding: 0;
@@ -14,6 +15,7 @@
   padding: 15px;
   text-align: center;
   z-index: 1000;
+  font-size: 1.2rem;
 }
 
 /* GRID LAYOUT */
@@ -21,6 +23,8 @@
   display: grid;
   grid-template-columns: 260px 1fr;
   min-height: 100vh;
+  gap: 20px;
+  padding: 20px;
 }
 
 /* SIDEBAR */
@@ -30,11 +34,17 @@
   padding: 20px;
   position: sticky;
   top: 60px;
-  height: fit-content;
+  border-radius: 12px;
+}
+
+.sidebar h3 {
+  margin-bottom: 15px;
 }
 
 .sidebar li {
   margin: 12px 0;
+  cursor: pointer;
+  list-style: none;
 }
 
 /* MAIN GRID */
@@ -43,11 +53,10 @@
   grid-template-columns: repeat(3, 1fr);
   grid-auto-rows: 180px;
   gap: 20px;
-  padding: 20px;
   position: relative;
 }
 
-/* HERO */
+/* HERO (Priority Task) */
 .hero {
   grid-column: span 3;
   background: linear-gradient(90deg, #6366f1, #22c55e);
@@ -57,21 +66,23 @@
   flex-direction: column;
   justify-content: center;
   border-radius: 12px;
+  font-size: 1.2rem;
 }
 
 /* CARDS */
 .card {
-  background: #f8fafc;
+  background: #bacfe4;
   border-radius: 12px;
   padding: 20px;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  color: #1f2937;
 }
 
-/* PROGRESS BARS */
+/* Progress Bars */
 .bar {
-  height: 8px;
+  height: 10px;
   background: #e2e8f0;
   margin: 10px 0;
   border-radius: 10px;
@@ -85,11 +96,16 @@
 }
 
 /* TASKS */
+.tasks ul {
+  list-style: none;
+  padding-left: 0;
+}
+
 .tasks ul li {
   margin: 6px 0;
 }
 
-/* FLOATING OVERLAP */
+/* FLOATING FOCUS BOX */
 .focus-box {
   position: absolute;
   top: 120px;
@@ -101,9 +117,42 @@
   z-index: 10;
   font-weight: bold;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+/* OPTIONAL: COLOR VARIATION FOR NEW CARDS */
+.card-1 {
+  background: #6b5b95;
+  color: white;
+}
+.card-2 {
+  background: #feb236;
+  color: #1f2937;
+}
+.card-3 {
+  background: #d64161;
+  color: white;
+}
+.card-4 {
+  background: #ff7b25;
+  color: white;
+}
+.card-5 {
+  background: #4a4e69;
+  color: white;
+}
+.card-6 {
+  background: #22c55e;
+  color: white;
 }
 
 /* RESPONSIVE */
+@media (max-width: 1200px) {
+  .main {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
 @media (max-width: 900px) {
   .container {
     grid-template-columns: 1fr;
@@ -114,11 +163,29 @@
   }
 
   .hero {
-    order: 2;
+    order: 1;
   }
 
   .focus-box {
     position: static;
     margin-top: 10px;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .main {
+    grid-auto-rows: 160px;
+    gap: 15px;
+  }
+
+  .card {
+    padding: 15px;
+    font-size: 0.9rem;
+  }
+
+  .focus-box {
+    padding: 15px;
+    font-size: 0.95rem;
   }
 }
