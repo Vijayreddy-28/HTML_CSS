@@ -9,3 +9,11 @@ Build a modal (popup window) that opens and closes without JavaScript.
 - Add CSS transitions for the modal’s appearance and disappearance.
 
 [Output Link](https://drive.google.com/file/d/1rMC6sLQ_bNVwqLgA_YJIkCrMrgw9Gwjx/view?usp=sharing)
+
+### Output Screenshots
+
+#### 1
+![output](images/t1.png)
+
+#### 2
+![output](images/t2.png)

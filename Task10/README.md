@@ -10,3 +10,14 @@ Create a fully functional, multi-section website that simulates the experience o
 - Ensure that the entire experience is responsive and leverages advanced CSS techniques (e.g., combining Flexbox, Grid, and pseudo-classes) to manage layout and state transitions.
 
 - [Output Link](https://drive.google.com/file/d/1kjnEkk8AiqbfPOyEkMy14CDe4hz9o-zm/view?usp=sharing)
+
+### Output Screenshots
+
+#### 1
+![output](images/t1.png)
+
+#### 2
+![output](images/t2.png)
+
+#### 3
+![output](images/t3.png)
