@@ -16,3 +16,15 @@ Create a fully functional, multi-section website that simulates the experience o
 ![output](images/4.png)
 
 ![output](images/5.png)
+- [Output Link](https://drive.google.com/file/d/1kjnEkk8AiqbfPOyEkMy14CDe4hz9o-zm/view?usp=sharing)
+
+### Output Screenshots
+
+#### 1
+![output](images/t1.png)
+
+#### 2
+![output](images/t2.png)
+
+#### 3
+![output](images/t3.png)
