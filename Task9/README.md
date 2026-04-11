@@ -14,5 +14,5 @@ Design a sophisticated webpage layout that combines CSS Grid and Flexbox techniq
 
 ![output](images/3.png)
 
-![output](images/Screenshot 2026-04-11 223408.png)
+![output](images/t91.png)
 
