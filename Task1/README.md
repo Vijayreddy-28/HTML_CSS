@@ -16,11 +16,11 @@ Create a single-page website using semantic HTML elements such as `<header>`, `<
 
 #### 1
 
-![Output](images/t1.png)
+![Output](images/t11.png)
 
 #### 2
 
-![Output](images/t2.png)
+![Output](images/t22.png)
 
 #### 3
 
