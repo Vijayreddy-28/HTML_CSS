@@ -18,13 +18,10 @@
   font-size: 1.2rem;
 }
 
-/* GRID LAYOUT */
 .container {
-  display: grid;
-  grid-template-columns: 260px 1fr;
-  min-height: 100vh;
-  gap: 20px;
+  display: block;
   padding: 20px;
+  margin-left: 280px;
 }
 
 /* SIDEBAR */
@@ -32,9 +29,13 @@
   background: #020617;
   color: #cbd5f5;
   padding: 20px;
-  position: sticky;
-  top: 60px;
   border-radius: 12px;
+  position: fixed;
+  top: 90px;
+  left: 20px;
+  width: 240px;
+  height: calc(100vh - 90px);
+  overflow-y: auto;
 }
 
 .sidebar h3 {
