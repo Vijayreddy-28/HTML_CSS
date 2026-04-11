@@ -24,8 +24,8 @@ Design a navigation bar with a dropdown submenu that appears on hover.
 
 #### 3
 
-![output](images/4.png)
+![output](images/t4.png)
 
 #### 4
 
-![output](images/5.png)
+![output](images/t5.png)
