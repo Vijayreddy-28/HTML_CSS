@@ -1,62 +1,75 @@
-body {
+/* Reset */
+* {
   margin: 0;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: #000;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
 }
-.root-container {
+
+/* Body */
+body {
+  background: linear-gradient(135deg, #dff6f0, #f6f9fc);
+  padding: 30px;
+}
+
+/* Grid */
+.grid-container {
   display: grid;
-  grid-template-columns: repeat(3, 150px);
-  grid-template-rows: repeat(3, 150px);
-  gap: 20px;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
 }
 
-.item {
-  border-radius: 8px;
-  overflow: hidden;
-  box-shadow: 0px 0px 10px rgb(232, 229, 229);
-}
-.item img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+/* Card */
+.card {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(10px);
+  padding: 25px;
+  border-radius: 15px;
+  text-align: center;
+
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  transition: all 0.4s ease;
+  cursor: pointer;
 }
 
-.item-7 {
-  background-color: rgb(248, 228, 187);
-  border-color: black;
-  grid-column: 3;
-  grid-row: 1 / 4;
+/* Title */
+.card h3 {
+  color: #2c3e50;
+  margin-bottom: 10px;
 }
 
-.item:hover {
-  transform: scale(1.08);
-  box-shadow: 3px 3px 8px rgb(19, 212, 64);
+/* Text */
+.card p {
+  color: #555;
+  font-size: 14px;
 }
-.item-7 {
-  display: grid;
-  grid-template-columns: repeat(1, 1fr);
-  grid-template-rows: (5, 1fr);
+
+/* 🔥 Hover Effects */
+.card:hover {
+  transform: translateY(-12px) scale(1.05) rotateX(5deg);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
 }
-.alpha {
-  justify-content: center;
-  display: flex;
-  font-weight: bold;
-  align-items: center;
-  font-size: 50px;
-  font-family: "Orbitron", sans-serif;
-  color: #b01a1a;
-  background: #000000;
-  text-shadow:
-    0 0 5px #ffffff,
-    0 0 5px #ffffff,
-    0 0 5px #ed0404;
+
+/* Glow effect */
+.card:hover h3 {
+  color: #1abc9c;
+  transform: scale(1.1);
 }
+
 @media (max-width: 768px) {
-  .root-container {
-    display: flex;
-    flex-direction: column;
+  body {
+    padding: 15px;
+  }
+
+  /* Grid → single column */
+  .grid-container {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  /* Card full width */
+  .card {
+    width: 100%;
+    padding: 20px;
   }
 }
