@@ -9,3 +9,14 @@ Build an accordion where content sections expand and collapse on click.
 - Allow multiple sections to be open simultaneously (if desired) or restrict it to one open section at a time.
 
 [Output Link](https://drive.google.com/file/d/1AjSQvZSjN6X8tZuG__oH4wtDWw11OJqA/view?usp=sharing)
+
+### Output Screenshots
+
+#### 1
+![output](images/t1.png)
+
+#### 2
+![output](images/t2.png)
+
+#### 3
+![output](images/t3.png)
