@@ -28,6 +28,7 @@ input {
   height: 100%;
 }
 
+/* Individual slides */
 .slide {
   position: absolute;
   width: 100%;
@@ -36,10 +37,12 @@ input {
   transition: opacity 0.5s ease-in-out;
 }
 
+/* Slide images */
 .slide img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  border-radius: 10px;
 }
 
 #s1:checked ~ .slides .slide:nth-child(1),
